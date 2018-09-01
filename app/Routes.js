@@ -3,14 +3,17 @@ import React from 'react';
 import { Switch, Route } from 'react-router';
 import routes from './constants/routes.json';
 import App from './containers/App';
-import HomePage from './containers/HomePage';
+import Calc from './containers/Calc';
 import CounterPage from './containers/CounterPage';
+import HomePage from './containers/HomePage'; // TODO: we will create many versions for different users
 
 export default () => (
   <App>
     <Switch>
-      <Route path={routes.COUNTER} component={CounterPage} />
-      <Route path={routes.HOME} component={HomePage} />
+       <Route path={routes.COUNTER} component={CounterPage} />
+       <Route path={routes.HOME} component={HomePage} />
+
+       <Route path={routes.CALC} component={Calc} />
     </Switch>
   </App>
 );
