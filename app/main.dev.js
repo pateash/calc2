@@ -60,12 +60,16 @@ app.on('ready', async () => {
     await installExtensions();
   }
 
+
+  // main window specification
   mainWindow = new BrowserWindow({
-    show: false,
+    show: false,// initially show false, show as soon as html loaded
     width: 1024,
     height: 728
   });
 
+
+  // loading that file on development environment, prod is same just smaller version
   mainWindow.loadURL(`file://${__dirname}/app.html`);
 
   //        https://github.com/electron/electron/blob/master/docs/api/browser-window.md#using-ready-to-show-event
