@@ -7,7 +7,7 @@ import Calc from './containers/Calc';
 import CounterPage from './containers/CounterPage';
 import HomePage from './containers/HomePage';
 
-// TODO: we will create many versions for different users
+// TODO:4 we will create many versions for different users(ex- programmer, banker)
 
 export default () => (
   <App>
