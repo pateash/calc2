@@ -1,6 +1,6 @@
-# electron-react-boilerplate
+# Calc2
 
-### A Boilerplate for Scalable Cross-Platform Desktop Apps
+### 2nd Generation Cross-Platform Calculator for everyone
 
 <br/>
 
@@ -14,11 +14,14 @@
 [![Jest](./internals/img/jest-padded-90.png)](https://facebook.github.io/jest/)
 [![Yarn](./internals/img/yarn-padded-90.png)](https://yarnpkg.com/)
 
-[Electron](http://electron.atom.io/) application boilerplate based on [React](https://facebook.github.io/react/), [Redux](https://github.com/reactjs/redux), [React Router](https://github.com/reactjs/react-router), [Webpack](http://webpack.github.io/docs/), [React Transform HMR](https://github.com/gaearon/react-transform-hmr) for rapid application development.
+[Electron](http://electron.atom.io/) based calculator application based on [React](https://facebook.github.io/react/), [Redux](https://github.com/reactjs/redux), [React Router](https://github.com/reactjs/react-router), [Webpack](http://webpack.github.io/docs/) for everyone.
 
-## Install
 
-- **If you have installation or compilation issues with this project, please see [our debugging guide](https://github.com/chentsulin/electron-react-boilerplate/issues/400)**
+## Installing
+we will provide installations as soon as we release any stable version...
+
+## Contributing
+
 
 First, clone the repo via git:
 
