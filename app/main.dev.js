@@ -68,6 +68,7 @@ app.on('ready', async () => {
     height: 728
   });
 
+  mainWindow.webContents.openDevTools();
 
   // loading that file on development environment, prod is same just smaller version
   mainWindow.loadURL(`file://${__dirname}/app.html`);
