@@ -4,7 +4,7 @@
   "version": "0.14.0",
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
   "scripts": {
-    "tailwind":"tailwind build app/resources/css/tailwind.src.css -c  tailwind.js -o app/resources/css/tailwind.css",
+    "tailwind": "tailwind build app/resources/css/tailwind.src.css -c  tailwind.js -o app/resources/css/tailwind.css",
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.renderer.dev.dll.js --colors",
     "build-main": "cross-env NODE_ENV=production node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.main.prod.js --colors",
@@ -213,6 +213,7 @@
     "devtron": "^1.4.0",
     "electron-debug": "^2.0.0",
     "history": "^4.7.2",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-hot-loader": "^4.3.4",
