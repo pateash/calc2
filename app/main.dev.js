@@ -64,8 +64,9 @@ app.on('ready', async () => {
   // main window specification
   mainWindow = new BrowserWindow({
     show: false,// initially show false, show as soon as html loaded
-    width: 1024,
-    height: 728
+    width: 800,
+    height: 700,
+    resizable: false
   });
 
   mainWindow.webContents.openDevTools();
