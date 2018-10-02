@@ -4,7 +4,9 @@ import { AppContainer } from 'react-hot-loader';
 import Root from './containers/Root';
 import { configureStore, history } from './store/configureStore';
 
- import './app.css';
+import './app.css';
+
+// import "./resources/css/tailwind.css"; //TODO:1 make this work here or TODO:3 and remove TODO:2
 
 const store = configureStore();
 
