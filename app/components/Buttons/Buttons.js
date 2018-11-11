@@ -1,14 +1,22 @@
 import React from 'react';
+import Button from "./Button/Button";
 
-const Buttons=()=>{
+// @flow
+type Props={
+  buttons: Array<string>
+};
+
+const Buttons=(props: Props)=>{
   const style={
     backgroundColor: '#2c2e39',
     minHeight: '67%'
   };
 
   return (
-    <div className="buttons h-2/3" style={style}>
-      <div className="button" />
+    <div className="buttons h-2/3 flex flex-wrap" style={style}>
+      {
+        props.buttons.map((button,index)=><Button key={index}>{button}</Button>)
+      }
     </div>
     );
 };
