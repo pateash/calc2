@@ -30,19 +30,27 @@ export default class Home extends React.Component<Props,State>{
 
 
   onInputChangeHandler=(event: any)=>{
-    const inputValue=event.target.value;
+    const inputValue=event.target.value.trim(); // always trim the input before passing it to eval(), works anyway but better
     const outputValue=Calculator.eval(inputValue);
 
     this.setState({inputValue,outputValue});
   };
 
+  onButtonsPressedHandler=(buttonValue: string, event: any)=>{
+    let {inputValue}=this.state;
+
+    inputValue= inputValue === '0'? buttonValue : inputValue+buttonValue;
+    const outputValue=Calculator.eval(inputValue);
+    this.setState({inputValue,outputValue});
+  }
+
   render(){
     return (
       <div className="h-screen" >
-         <InputOutput onInputChange={this.onInputChangeHandler}
-                      inputValue={this.state.inputValue}
-                       outputValue={this.state.outputValue}/>
-        <Buttons buttons={this.state.buttons}/>
+        <InputOutput onInputChange={this.onInputChangeHandler}
+                     inputValue={this.state.inputValue}
+                     outputValue={this.state.outputValue}/>
+        <Buttons buttons={this.state.buttons} onButtonsPressed={(buttonValue: string)=>this.onButtonsPressedHandler(buttonValue)}/>
       </div>
     );
   }

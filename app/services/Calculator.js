@@ -9,8 +9,8 @@ export default class Calculator{
     let ans;
     try {
       if(input===null || input==='')
-        throw null;
-      ans = Math.eval(input);
+        throw null; // throws exception if input is bad
+      ans = Math.eval(input); // else evaluate
     }
     catch(err) {
       console.error(err);
