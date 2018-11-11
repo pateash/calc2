@@ -24,7 +24,7 @@ export default class Home extends React.Component<Props,State>{
     outputValue: "0", // Output value is set to 0,
 
     // following buttons will be rendered
-    buttons: ['1','2','3','4','5','6','7','8','9','0','1','2','3','4','5','6','7','8','9']
+    buttons: ['1','2','3','4','5','6','7','8','9','0','1','2','3','4','5','6','7','8','9','+','-','*','/','%']
   };
 
 
@@ -39,7 +39,7 @@ export default class Home extends React.Component<Props,State>{
   onButtonsPressedHandler=(buttonValue: string, event: any)=>{
     let {inputValue}=this.state;
 
-    inputValue= inputValue === '0'? buttonValue : inputValue+buttonValue;
+    inputValue= (inputValue === '0' || !isNaN(buttonValue))? buttonValue : inputValue+buttonValue;
     const outputValue=Calculator.eval(inputValue);
     this.setState({inputValue,outputValue});
   }
