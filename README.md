@@ -1,6 +1,6 @@
 # Calc2
 
-### 2nd Generation Cross-Platform Calculator for everyone
+### 2nd Generation Cross-Platform Calc for everyone
 
 <br/>
 

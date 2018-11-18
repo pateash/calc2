@@ -3,7 +3,7 @@
 // TODO: remove unneccessary comments from code
 import * as Math from 'mathjs'
 
-export default class Calculator{
+export default class CalculatorService{
 
   static eval(input: string): string {
     let ans;
@@ -19,6 +19,4 @@ export default class Calculator{
     console.log(`answer ${ans}`);
     return String(ans);
   }
-
-
 }
