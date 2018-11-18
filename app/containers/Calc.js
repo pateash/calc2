@@ -1,8 +1,9 @@
 // @flow
 import React from 'react';
 import InputOutput from '../components/InputOutput/InputOutput';
-import Buttons from '../components/Buttons/Buttons';
+import * as Constants from '../constants/constants';
 import CalculatorService from '../services/CalculatorService';
+import Buttons from '../components/Buttons/Buttons';
 
 // we can supply Props type using Props
 type Props={
@@ -23,11 +24,12 @@ export default class Home extends React.Component<Props,State>{
     inputValue: "0", // initial value is set to 0,
     outputValue: "0", // Output value is set to 0,
 
-    // following buttons will be rendered
-    buttons: ['1','2','3','4','5','6','7','8','9','0','1','2','3','4','5','6','7','8','9','+','-','*','/','%','C','<<']
+    // following Constants will be rendered
+    buttons: ['1','2','3','4','5','6','7','8','9',
+      '+','-','*','/','%',Constants.CLEAR,Constants.BACKSPACE,Constants.PARENTHESES]
   };
 
-  controlButtons = ['C','<<'];
+  controlButtons = [Constants.CLEAR,Constants.BACKSPACE,Constants.PARENTHESES];
 
   onInputChangeHandler=(event: any)=>{
     const inputValue=event.target.value.trim(); // always trim the input before passing it to eval(), works anyway but better
@@ -52,19 +54,21 @@ export default class Home extends React.Component<Props,State>{
     let {inputValue,outputValue}=this.state;
 
     switch(buttonValue){
-      case 'C':
+      case Constants.CLEAR:
         console.log("C");
-         inputValue="0";
-         outputValue=CalculatorService.eval(inputValue);
-         break;
-      case '<<':
-          console.log("<<");
-         inputValue=inputValue.slice(0,-1); // get input removing last character
-         outputValue=CalculatorService.eval(inputValue);
-         break;
+        inputValue="0";
+        break;
+      case Constants.BACKSPACE:
+        console.log("<<");
+        inputValue=inputValue.slice(0,-1); // get input removing last character
+        break;
+      case Constants.PARENTHESES:
+        inputValue=`(${inputValue})`;
+        break;
       default:
         console.error("Unknown control Button");
     }
+    outputValue=CalculatorService.eval(inputValue);
     this.setState({ inputValue, outputValue});
   }
 
