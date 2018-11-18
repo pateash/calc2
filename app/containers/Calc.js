@@ -54,8 +54,8 @@ export default class Home extends React.Component<Props,State>{
     switch(buttonValue){
       case 'C':
         console.log("C");
-         inputValue=0;
-         outputValue=0;
+         inputValue="0";
+         outputValue=CalculatorService.eval(inputValue);
          break;
       case '<<':
           console.log("<<");
