@@ -5,18 +5,26 @@ import * as Math from 'mathjs'
 
 export default class CalculatorService{
 
+   static invalidOutput="0";
+
   static eval(input: string): string {
     let ans;
     try {
-      if(input===null || input==='')
+      if (input === null || input === '')
         throw null; // throws exception if input is bad
+
       ans = Math.eval(input); // else evaluate
     }
-    catch(err) {
-      console.error(err);
-      return "0";
-    }
-    console.log(`answer ${ans}`);
-    return String(ans);
+    catch(err)
+      {
+        console.error(err);
+        return this.invalidOutput;
+      }
+
+      if (isNaN(ans)) { // if answer is not a number, such as issue #10
+        return this.invalidOutput;
+      }
+      console.log(`answer ${ans}`);
+      return String(ans);
   }
 }
