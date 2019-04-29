@@ -61,8 +61,12 @@ export default class Home extends React.Component<Props,State>{
       case Constants.BACKSPACE:
         console.log("<<");
         inputValue=inputValue.slice(0,-1); // get input removing last character
+
+        if(inputValue.length===0) // this will prevent empty input field
+            inputValue="0"
         break;
-      case Constants.PARENTHESES:
+
+        case Constants.PARENTHESES:
         inputValue=`(${inputValue})`;
         break;
       default:
