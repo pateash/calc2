@@ -14,7 +14,7 @@ export default class CalculatorService{
     }
     catch(err) {
       console.error(err);
-      return "Invalid Input";
+      return "0";
     }
     console.log(`answer ${ans}`);
     return String(ans);
