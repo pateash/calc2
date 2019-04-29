@@ -4,7 +4,8 @@ import React from 'react';
 
 type Props={
   inputValue: string,
-  outputValue: string
+  outputValue: string,
+  onInputChange: any
 };
 
 
@@ -30,9 +31,8 @@ const InputOutput=(props: Props)=>{
       <div className="font-mono  text-white text-2xl min-w-full">Calc2</div>
       <input type="text" style={style2}
              className="font-mono text-right  text-white text-3xl min-w-full"
-             onChange={props.onInputChange}
-             value={props.inputValue}/>
-
+             value={props.inputValue}
+             onChange={props.onInputChange}/>
       <div style={style3}
            className='font-mono text-right text-white text-4xl min-w-full'>
         = {props.outputValue}

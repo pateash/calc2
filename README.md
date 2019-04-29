@@ -1,6 +1,6 @@
 # Calc2
 
-### 2nd Generation Cross-Platform Calculator for everyone
+### 2nd Generation Cross-Platform Calc for everyone
 
 <br/>
 
@@ -16,6 +16,8 @@
 
 [Electron](http://electron.atom.io/) based calculator application based on [React](https://facebook.github.io/react/), [Redux](https://github.com/reactjs/redux), [React Router](https://github.com/reactjs/react-router), [Webpack](http://webpack.github.io/docs/) for everyone.
 
+cloned from [electron-react-boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate
+)
 
 ## Installing
 we will provide installations as soon as we release any stable version...
